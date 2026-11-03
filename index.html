@@ -54,4 +54,11 @@ $("out").style.display="block";$("out").scrollIntoView({behavior:"smooth",block:
 $("copy").onclick=async()=>{const txt=$("resultBody").innerText;try{await navigator.clipboard.writeText(txt);$("copy").textContent=T[$("lang").value].copied;}catch(e){const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();}};
 $("clear").onclick=()=>{$("decision").value="";$("a").value="";$("b").value="";$("out").style.display="none";};
 $("lang").onchange=render; $("lang").value="tr";render();
-</script></body></html>
+</script>
+<div style="position:fixed;bottom:20px;right:20px;z-index:999">
+<a href="https://github.com/fm-er/decision-twin/discussions" target="_blank" rel="noopener noreferrer" style="display:block;background:#5189ff;color:white;padding:14px 18px;border-radius:30px;text-decoration:none;font-family:Arial,sans-serif;font-size:14px;box-shadow:0 4px 15px #0005">
+💡 Feedback / Fikir Öner
+</a>
+</div>
+</body>
+</html>
